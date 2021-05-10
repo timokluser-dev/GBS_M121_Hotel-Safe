@@ -40,7 +40,7 @@ namespace Hotel_Safe_API
                     Type = SecuritySchemeType.ApiKey,
                     In = ParameterLocation.Header,
                     Name = "X-Api-Key",
-                    Description = "API Key",
+                    Description = "API Key for the Hotel_Safe_API",
                 });
 
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement

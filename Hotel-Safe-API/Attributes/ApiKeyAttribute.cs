@@ -18,7 +18,7 @@ namespace Hotel_Safe_API.Attributes
                 context.Result = new ContentResult()
                 {
                     StatusCode = 401,
-                    Content = "{\"Error\":\"No Api Key provided\"}",
+                    Content = "{\"error\":\"No Api Key provided\"}",
                     ContentType = "application/json"
                 };
                 return;
@@ -35,7 +35,7 @@ namespace Hotel_Safe_API.Attributes
                 context.Result = new ContentResult()
                 {
                     StatusCode = 401,
-                    Content = "{\"Error\":\"Api Key not valid\"}",
+                    Content = "{\"error\":\"Api Key not valid\"}",
                     ContentType = "application/json"
                 };
                 return;

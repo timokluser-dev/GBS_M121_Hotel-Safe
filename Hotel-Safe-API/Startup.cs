@@ -76,9 +76,10 @@ namespace Hotel_Safe_API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Hotel_Safe_API v1"));
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Hotel_Safe_API v1"));
 
             app.UseMiddleware<AdminSafeListMiddleware>(Configuration["AdminSafeList"]);
 

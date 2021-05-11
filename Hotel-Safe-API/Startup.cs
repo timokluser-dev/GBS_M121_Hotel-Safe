@@ -37,7 +37,7 @@ namespace Hotel_Safe_API
 
             services.AddControllers().AddNewtonsoftJson(options => {
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
-                // Serializer specific for OData responses
+                // Serializer specific for OData responses to match JSON Specifications
                 options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             });
 
@@ -49,24 +49,7 @@ namespace Hotel_Safe_API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Hotel_Safe_API", Version = "v1" });
 
-                c.AddSecurityDefinition("ApiKey", new OpenApiSecurityScheme()
-                {
-                    Type = SecuritySchemeType.ApiKey,
-                    In = ParameterLocation.Header,
-                    Name = "X-Api-Key",
-                    Description = "API Key for the Hotel_Safe_API",
-                });
-
-                c.AddSecurityRequirement(new OpenApiSecurityRequirement
-                {
-                    {
-                        new OpenApiSecurityScheme
-                        {
-                            Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "ApiKey" }
-                        },
-                        new string[] { }
-                    }
-                });
+                AddSwaggerApiKeyAuthenticationField(c);
             });
         }
 
@@ -109,6 +92,28 @@ namespace Hotel_Safe_API
                 foreach (var inputFormatter in options.InputFormatters.OfType<ODataInputFormatter>().Where(_ => _.SupportedMediaTypes.Count == 0))
                 {
                     inputFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/prs.odatatestxx-odata"));
+                }
+            });
+        }
+
+        private static void AddSwaggerApiKeyAuthenticationField(SwaggerGenOptions options)
+        {
+            options.AddSecurityDefinition("ApiKey", new OpenApiSecurityScheme()
+            {
+                Type = SecuritySchemeType.ApiKey,
+                In = ParameterLocation.Header,
+                Name = "X-Api-Key",
+                Description = "API Key for the Hotel_Safe_API",
+            });
+
+            options.AddSecurityRequirement(new OpenApiSecurityRequirement()
+            {
+                {
+                    new OpenApiSecurityScheme
+                    {
+                        Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "ApiKey" }
+                    },
+                    new string[] { }
                 }
             });
         }

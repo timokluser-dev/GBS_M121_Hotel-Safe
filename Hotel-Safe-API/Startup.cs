@@ -100,7 +100,21 @@ namespace Hotel_Safe_API
                 endpoints.MapControllers();
                 // OData Permissions:
                 endpoints.Select().OrderBy().Filter().Count().Expand().MaxTop(1000).SkipToken();
+                endpoints.MapODataRoute("api", "api", GetEdmModel());
             });
+        }
+            });
+
+        private static IEdmModel GetEdmModel()
+        {
+            var builder = new ODataConventionModelBuilder();
+            builder.EnableLowerCamelCase();
+
+            builder.EntitySet<Hotel>("Hotels");
+            builder.EntitySet<Appartment>("Appartments");
+            builder.EntitySet<Safe>("Safes");
+
+            return builder.GetEdmModel();
         }
     }
 }

@@ -6,12 +6,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Hotel_Safe_API.Models;
 using Hotel_Safe_API.Attributes;
+using Microsoft.AspNet.OData;
 
 namespace Hotel_Safe_API.Controllers
 {
     [ApiKey]
     [Route("api/[controller]")]
     [ApiController]
+    [EnableQuery()]
     public class HotelsController : ControllerBase
     {
         private readonly HotelSafeContext _context;

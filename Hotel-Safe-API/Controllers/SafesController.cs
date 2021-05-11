@@ -8,12 +8,14 @@ using Hotel_Safe_API.Models;
 using Hotel_Safe_API.Attributes;
 using System.Security.Cryptography;
 using System.Text;
+using Microsoft.AspNet.OData;
 
 namespace Hotel_Safe_API.Controllers
 {
     [ApiKey]
     [Route("api/[controller]")]
     [ApiController]
+    [EnableQuery()]
     public class SafesController : ControllerBase
     {
         private readonly HotelSafeContext _context;

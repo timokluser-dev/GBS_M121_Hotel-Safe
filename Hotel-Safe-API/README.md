@@ -1,6 +1,12 @@
 # Hotel-Safe-API
 
-tbd
+`Hotel-Safe-API` was built using ASP.Net Core Web API Version 5. In addition OData support was added.
+
+- [OData Information](https://www.odata.org/getting-started/basic-tutorial/)
+- [Understand OData](https://www.odata.org/getting-started/understand-odata-in-6-steps/)
+  
+  
+<hr>
 
 ## Additional Help
 

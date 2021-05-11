@@ -12,6 +12,9 @@ using Microsoft.AspNet.OData.Formatter;
 using Microsoft.Net.Http.Headers;
 using System.Linq;
 using Newtonsoft.Json.Serialization;
+using Microsoft.OData.Edm;
+using Microsoft.AspNet.OData.Builder;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Hotel_Safe_API
 {
@@ -40,18 +43,7 @@ namespace Hotel_Safe_API
 
             services.AddOData();
 
-            // Workaround for OData and Swagger: https://github.com/OData/WebApi/issues/1177
-            services.AddMvcCore(options =>
-            {
-                foreach (var outputFormatter in options.OutputFormatters.OfType<ODataOutputFormatter>().Where(_ => _.SupportedMediaTypes.Count == 0))
-                {
-                    outputFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/prs.odatatestxx-odata"));
-                }
-                foreach (var inputFormatter in options.InputFormatters.OfType<ODataInputFormatter>().Where(_ => _.SupportedMediaTypes.Count == 0))
-                {
-                    inputFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/prs.odatatestxx-odata"));
-                }
-            });
+            AddFormatters(services);
 
             services.AddSwaggerGen(c =>
             {
@@ -103,7 +95,22 @@ namespace Hotel_Safe_API
                 endpoints.MapODataRoute("api", "api", GetEdmModel());
             });
         }
+
+        private static void AddFormatters(IServiceCollection services)
+        {
+            // Workaround for OData and Swagger: https://github.com/OData/WebApi/issues/1177
+            services.AddMvcCore(options =>
+            {
+                foreach (var outputFormatter in options.OutputFormatters.OfType<ODataOutputFormatter>().Where(_ => _.SupportedMediaTypes.Count == 0))
+                {
+                    outputFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/prs.odatatestxx-odata"));
+                }
+                foreach (var inputFormatter in options.InputFormatters.OfType<ODataInputFormatter>().Where(_ => _.SupportedMediaTypes.Count == 0))
+                {
+                    inputFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/prs.odatatestxx-odata"));
+                }
             });
+        }
 
         private static IEdmModel GetEdmModel()
         {

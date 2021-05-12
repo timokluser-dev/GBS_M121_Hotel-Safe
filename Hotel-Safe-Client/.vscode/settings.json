@@ -1,0 +1,12 @@
+// https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino
+{
+    "arduino.path": "C:/Program Files (x86)/Arduino",
+    "arduino.commandPath": "arduino_debug.exe",
+    "arduino.logLevel": "info",
+    "arduino.openPDEFiletype": false,
+    "arduino.enableUSBDetection": true,
+    "arduino.disableTestingOpen": false,
+    "arduino.skipHeaderProvider": false,
+    "arduino.additionalUrls": [],
+    "arduino.defaultBaudRate": 115200
+}

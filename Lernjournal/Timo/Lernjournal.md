@@ -69,3 +69,35 @@
 
 <br>
 <br>
+
+# Lernjournal 19.05.2021
+
+## Tätigkeiten
+
+- Besprechung bezüglich dem Master PIN und der Fail2Ban Funktion
+- Erster Entwurf vom Code für den Arduino erstellt
+- Header Files zur Modularisierung erstellt
+- Funktionen in den Header Files programmiert und testhalber statischer Inhalt zurückgegeben
+
+## Was habe ich gelernt
+
+- Header Files zur Vereinheitlichung mit dem Arduino
+- Programm [Fritzing](http://www.fritzing.org/) zum Erstellen von Arduino Schaltpläne
+
+## Positive Erfahrungen
+
+- Numpad ist angekommen und konnte schon getestet werden
+- Mein Konzept mit dem Auslagern von Funktionen in Headerfiles scheint mehrheitlich zu funktionieren
+
+## Negative Erfahrungen
+
+- Es scheint ein Problem mit dem Inkludieren von speziellen Header Files zu geben
+
+## Welches sind die nächsten Arbeitsschritte
+
+- Bug mit dem Header File include beheben
+- Komponenten anschliessen und die Header FIles mit funktionalität versehen
+- Auf die restlichen Komponenten (WiFi Modul)
+
+<br>
+<br>

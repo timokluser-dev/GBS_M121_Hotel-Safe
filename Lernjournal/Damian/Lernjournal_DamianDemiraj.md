@@ -28,12 +28,32 @@ Heute habe ich die Detaillierte Blockskizze gemacht und die andere Blockskizze �
 
 ### Erlerntes
 
-Heute habe ich mich mit dem Schaltplan auseinandergesezt. Dabei habe ich neben der Logik auch die Zeichen repetiert.
+Heute habe ich mich mit dem Schaltplan auseinandergesetzt. Dabei habe ich neben der Logik auch die Zeichen repetiert.
 
 ### Positives/Negatives
 
-Die Arbeit ging wieder zügig von statten. Allerdings mussten wir unsere Vorstellungen, welche etwas wild geloffen sind etwas zügeln.
+Die Arbeit ging wieder zügig von statten. Allerdings mussten wir unsere Vorstellungen, welche etwas wild gelaufen sind, etwas zügeln.
 
 ### Nächste Arbeitsschritte
 
 Beim nächsten mal werde ich den Schaltplan fertigstellen und mit dem Steckplan beginnen.
+
+## Woche 3 - 19.05.2021
+
+### Tätigkeiten
+
+Ausserhalb der Schule haben Timo und ich eine Provisorische Planung gemacht, um die Aufgaben aufzuteilen. 
+Heute habe ich die Skizze des Schaltplanes fertiggestellt. 
+Anschliessend hat Timo mir ein Tool vorgeschlagen mit dem ich sowohl den Schaltplan als auch den Steckplan machen kann. Nachdem ich das Tool installiert habe, habe ich mich als erstes mit dem Tool bekannt gemacht. Ein Problem, welches mir sofort aufgefallen ist, ist dass das Programm keine Europäische Schaltzeichen unterstützt. Nach etwas Suchen bin ich jedoch auf eine Lösung gestossen. Da die Zeit jedoch etwas knapp wurde habe ich mich dazu Entschieden dies am Wochenende zu machen. Dies hat auch zum Vorteil, das ich, im Gegensatz zur Schule, an einem guten Arbeitsplatz arbeiten kann.
+
+### Erlerntes
+
+Ich habe ein neues Programm kennengelernt, welches allerdings mit grosser Wahrscheinlichkeit mir nur für dieses spezifische Projekt von Nutzen sein wird.
+
+### Positives/Negatives
+
+Timo und ich hatten erneut eine gute Arbeitsteilung. Trotz der verschiedenen Aufgaben konnten wir uns bei Bedarf gegenseitig helfen.
+
+### Nächste Arbeitsschritte
+
+Am Wochenende werde ich den Steck- und Schaltplan fertig machen. Somit kann ich in den nächsten beiden Lektionen das Stecken machen. So bleiben uns noch ca. 2 Wochen für das Programmieren und etwa eine Woche für den Abschluss.

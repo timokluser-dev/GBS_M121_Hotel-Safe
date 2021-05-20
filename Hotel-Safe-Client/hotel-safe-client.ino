@@ -7,12 +7,11 @@
 
 // Libraries
 #include "libraries/ArduinoJson.h"
+#include "libraries/sha256.h"
 
 // Custom Header Files
-// backend.ino - Is auto included
-#include "sha256.h"
-#include "keypad.h"
-#include "display.h"
+#include "src/backend.h"
+#include "src/library.h"
 
 // Out scoped Variables
 String enteredPin;

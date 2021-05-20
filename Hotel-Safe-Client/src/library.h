@@ -1,11 +1,16 @@
 /**
+ * Hotel Safe Client: Main Library Wrapper
+ * @version 1.0
+ * @author ddemiraj, timokluser-dev
+ */
+
+/**
  * Hotel Safe Client: Display
  * Used to show the output on the Display
  * @version 1.0
  * @author ddemiraj, timokluser-dev
  * @see https://www.arduino.cc/en/Tutorial/LibraryExamples/HelloWorld
  */
-
 class Display
 {
 private:
@@ -66,4 +71,71 @@ public:
         delay(1000);
         print("Contact reception");
     }
+};
+
+/**
+ * Hotel Safe Client: Keypad Library
+ * Used to get input from the Keypad
+ * @version 1.0
+ * @author ddemiraj, timokluser-dev
+ * @see https://arduinojson.org
+ */
+class Keypad
+{
+private:
+public:
+    static String readKey()
+    {
+        // TODO: Implementation
+
+        return String("0");
+    }
+};
+
+/**
+ * Hotel Safe Client: LED
+ * Used to show corresponding LEDs
+ * @version 1.0
+ * @author ddemiraj, timokluser-dev
+ */
+class LED
+{
+private:
+public:
+};
+
+/**
+ * Hotel Safe Client: PiezoSummer 
+ * Used to make sound when PIN Number pressed
+ * @version 1.0
+ * @author ddemiraj, timokluser-dev
+ */
+class PiezoSummer
+{
+private:
+public:
+};
+
+/**
+ * Hotel Safe Client: ShiftRegister 
+ * Used to make sound when PIN Number pressed
+ * @version 1.0
+ * @author ddemiraj, timokluser-dev
+ */
+class ShiftRegister
+{
+private:
+public:
+};
+
+/**
+ * Hotel Safe Client: WiFi 
+ * Used to connect to the WIFI to call API
+ * @version 1.0
+ * @author ddemiraj, timokluser-dev
+ */
+class Wifi
+{
+private:
+public:
 };

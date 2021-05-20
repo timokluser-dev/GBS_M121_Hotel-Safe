@@ -7,8 +7,6 @@
  * @see https://arduinojson.org
  */
 
-#include "libraries/ArduinoJson.h"
-
 // reserved JSON size per document [in Bytes]
 #define JSONSIZE 300
 

@@ -6,11 +6,14 @@
  * @see https://arduinojson.org
  */
 
-String readKey()
+class Keypad
 {
-    // do sth.
+private:
+public:
+    static String readKey()
+    {
+        // TODO: Implementation
 
-    delay(5000);
-
-    return String("0");
-}
+        return String("0");
+    }
+};

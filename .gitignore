@@ -650,3 +650,7 @@ $RECYCLE.BIN/
 *.tlog
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,linux,csharp,c++,visualstudio,visualstudiocode
+
+# Project Specific
+*/build
+*/build/*

@@ -3,38 +3,67 @@
  * Used to show the output on the Display
  * @version 1.0
  * @author ddemiraj, timokluser-dev
- * @see https://arduinojson.org
+ * @see https://www.arduino.cc/en/Tutorial/LibraryExamples/HelloWorld
  */
 
-void printOnDisplay(String input)
+class Display
 {
-    // show on display
-
-    Serial.println("DISPLAY: " + input);
-}
-
-void clearDisplay()
-{
-    printOnDisplay("");
-}
-
-String hidePin(String pin)
-{
-    Serial.println("DISPLAY: Hide PIN: " + pin);
-    String hiddenPin = "";
-
-    for (int i = 0; i < pin.length(); i++)
+private:
+    static String hidePin(String pin)
     {
-        hiddenPin += "*";
-        i++;
+        String hiddenPin;
+
+        for (int i = 0; i < pin.length(); i++)
+        {
+            hiddenPin += "*";
+        }
+
+        for (int i = 0; i < (PINLENGTH - pin.length()); i++)
+        {
+            hiddenPin += "_";
+        }
+
+        return hiddenPin;
     }
 
-    for (int i = 0; i < (PINLENGTH - hiddenPin.length()); i++)
+public:
+    static void print(String input)
     {
+        // show on display
 
-        hiddenPin += "_";
-        i++;
+        Serial.println("DISPLAY: " + input);
     }
 
-    return hiddenPin;
-}
+    static void printPin(String pin)
+    {
+        String toDisplay = "PIN: " + hidePin(pin);
+
+        print(toDisplay);
+    }
+
+    static void clear()
+    {
+        print("");
+    }
+
+    static void displayPinWrong()
+    {
+        print("PIN: Wrong");
+        delay(1000);
+        print("Please try again");
+    }
+
+    static void displayPinCorrect()
+    {
+        print("PIN: Correct");
+        delay(1000);
+        print("Welcome");
+    }
+
+    static void displayPinBlocked()
+    {
+        print("PIN: is blocked");
+        delay(1000);
+        print("Contact reception");
+    }
+};

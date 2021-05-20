@@ -1,15 +1,21 @@
 /**
  * Hotel Safe Client based on Arduino and C++
+ * Main File
  * @version 1.0
  * @author ddemiraj, timokluser-dev
  */
 
-#include "api.h"
+// Libraries
+#include "libraries/ArduinoJson.h"
+
+// Custom Header Files
+// backend.ino - Is auto included
 #include "sha256.h"
 #include "keypad.h"
 #include "display.h"
 
-String enteredPin = "";
+// Out scoped Variables
+String enteredPin;
 
 void setup()
 {
@@ -18,7 +24,14 @@ void setup()
 
 void loop()
 {
-    printOnDisplay("PIN: " + hidePin(enteredPin));
+    if (enteredPin.length() == 0)
+    {
+        Display::print("Enter PIN");
+    }
+    else
+    {
+        Display::printPin(enteredPin);
+    }
 
     // Read PIN
     if (enteredPin.length() == PINLENGTH)
@@ -26,10 +39,16 @@ void loop()
         Serial.println("-- START CHECK ATTEMPT --");
 
         // generate SHA256 pin
-        String pinSha256 = SHA256(enteredPin);
-        Serial.println("SHA256: " + pinSha256);
+        String pinHashed = Sha256::encrypt(enteredPin);
+        Serial.println("SHA256: " + pinHashed);
 
         // API call
+        DynamicJsonDocument request = BackendHelper::prepareJSONDocument();
+        request["encryptedPin"] = pinHashed;
+        request["badgeNumber"] = JSONNULL;
+
+        String requestJson = BackendHelper::generateJSON(request);
+        Serial.println("JSON Request: " + requestJson);
 
         bool success = true;
 
@@ -51,7 +70,7 @@ void loop()
     {
         // read pin from keypad
         Serial.println("Read Key");
-        String key = readKey();
+        String key = Keypad::readKey();
 
         Serial.println("Entered Key: " + key);
         enteredPin += key;

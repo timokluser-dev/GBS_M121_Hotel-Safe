@@ -11,7 +11,6 @@ uint8_t data[256];
 int start = 0;
 int seconds = 0;
 uint8_t hash[32];
-String pin;
 #define SHA256_BLOCK_SIZE 32
 
 typedef struct
@@ -194,3 +193,13 @@ String SHA256(String data)
   sha256_final(&ctx, hash);
   return (btoh(hex, hash, 32));
 }
+
+class Sha256
+{
+private:
+public:
+  static String encrypt(String value)
+  {
+    return SHA256(value);
+  }
+};

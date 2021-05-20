@@ -2,5 +2,6 @@
     "port": "COM4",
     "board": "arduino:avr:uno",
     "sketch": "hotel-safe-client.ino",
-    "programmer": "arduino:avrispmkii"
+    "programmer": "arduino:avrispmkii",
+    "output": "build"
 }

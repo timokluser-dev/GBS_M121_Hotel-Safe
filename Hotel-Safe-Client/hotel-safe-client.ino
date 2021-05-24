@@ -10,6 +10,7 @@
 #include "libraries/sha256.h"
 
 // Custom Header Files
+#include "src/config.h"
 #include "src/backend.h"
 #include "src/library.h"
 

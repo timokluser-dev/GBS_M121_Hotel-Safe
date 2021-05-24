@@ -4,14 +4,16 @@ using Hotel_Safe_API.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Hotel_Safe_API.Migrations
 {
     [DbContext(typeof(HotelSafeContext))]
-    partial class HotelSafeContextModelSnapshot : ModelSnapshot
+    [Migration("20210515082731_Add Master Pin")]
+    partial class AddMasterPin
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -74,6 +76,9 @@ namespace Hotel_Safe_API.Migrations
 
                     b.Property<int>("FailedAttempts")
                         .HasColumnType("int");
+
+                    b.Property<string>("Pin")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("PinChanged")
                         .HasColumnType("datetime2");

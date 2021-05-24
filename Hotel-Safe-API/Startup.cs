@@ -6,7 +6,6 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Hotel_Safe_API.Models;
-using Hotel_Safe_API.Middlewares;
 using Microsoft.AspNet.OData.Extensions;
 using Microsoft.AspNet.OData.Formatter;
 using Microsoft.Net.Http.Headers;
@@ -15,6 +14,7 @@ using Newtonsoft.Json.Serialization;
 using Microsoft.OData.Edm;
 using Microsoft.AspNet.OData.Builder;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using Hotel_Safe_API.Responses;
 
 namespace Hotel_Safe_API
 {
@@ -64,8 +64,6 @@ namespace Hotel_Safe_API
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Hotel_Safe_API v1"));
 
-            app.UseMiddleware<AdminSafeListMiddleware>(Configuration["AdminSafeList"]);
-
             app.UseRouting();
 
             app.UseAuthorization();
@@ -87,11 +85,11 @@ namespace Hotel_Safe_API
             {
                 foreach (var outputFormatter in options.OutputFormatters.OfType<ODataOutputFormatter>().Where(_ => _.SupportedMediaTypes.Count == 0))
                 {
-                    outputFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/prs.odatatestxx-odata"));
+                    outputFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/odata"));
                 }
                 foreach (var inputFormatter in options.InputFormatters.OfType<ODataInputFormatter>().Where(_ => _.SupportedMediaTypes.Count == 0))
                 {
-                    inputFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/prs.odatatestxx-odata"));
+                    inputFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/odata"));
                 }
             });
         }

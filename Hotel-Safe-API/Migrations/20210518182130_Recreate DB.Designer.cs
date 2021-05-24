@@ -4,14 +4,16 @@ using Hotel_Safe_API.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Hotel_Safe_API.Migrations
 {
     [DbContext(typeof(HotelSafeContext))]
-    partial class HotelSafeContextModelSnapshot : ModelSnapshot
+    [Migration("20210518182130_Recreate DB")]
+    partial class RecreateDB
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

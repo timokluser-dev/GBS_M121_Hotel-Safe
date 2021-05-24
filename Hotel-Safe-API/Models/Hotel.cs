@@ -10,6 +10,7 @@ namespace Hotel_Safe_API.Models
         public Guid HotelId { get; set; }
         [Required]
         public string Name { get; set; }
+        public string EncryptedPinMaster { get; set; }
 
         public virtual ICollection<Appartment> Appartments { get; set; }
     }

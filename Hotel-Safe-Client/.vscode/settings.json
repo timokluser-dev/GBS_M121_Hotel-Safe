@@ -8,5 +8,6 @@
     "arduino.disableTestingOpen": false,
     "arduino.skipHeaderProvider": false,
     "arduino.additionalUrls": [],
-    "arduino.defaultBaudRate": 9600
+    "arduino.defaultBaudRate": 9600,
+    "cSpell.language": "en"
 }

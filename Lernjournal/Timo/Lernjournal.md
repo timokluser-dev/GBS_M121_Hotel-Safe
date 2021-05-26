@@ -97,7 +97,40 @@
 
 - Bug mit dem Header File include beheben
 - Komponenten anschliessen und die Header FIles mit funktionalität versehen
-- Auf die restlichen Komponenten (WiFi Modul)
+- _Auf die restlichen Komponenten (WiFi Modul, Schieberegister) warten_
+
+<br>
+<br>
+
+# Lernjournal 26.05.2021
+
+## Tätigkeiten
+
+- Bug mit dem Header Include behoben
+- WiFi Modul (ESP8266) in Betrieb genommen (Initial Konfiguration)
+- Code erweitern mit WiFi Verbindung
+- Versucht einen Http Request zu programmieren, ohne Erfolg
+
+## Was habe ich gelernt
+
+- Wenn mit mehreren Files gearbeitet wird, sollte eine `src/` Ordern erstellt werden, denn ansonsten kommt es zu Problemen mit dem Arduino compiler. (Genanntes Include Bug von letzter Woche)
+- Manchmal kommt es zu Caching Problemen beim Arduino wenn mir verschiedenen Libraries gearbeitet wird
+
+## Positive Erfahrungen
+
+- Die Verkablung vom WiFi Modul ist abgeschlossen und funktioniert
+- Gutes Arbeitstempo
+
+## Negative Erfahrungen
+
+- Bug mit der WiFi Library für das Wireless Modul, Reference zur Class wird nicht gefunden
+- Maximale Programmgrösse beim Arduino ist schnell erreicht
+
+## Welches sind die nächsten Arbeitsschritte
+
+- WiFi Library Bug begehen
+- Programm Size optimieren
+- API Calls absetzen mit dem Arduino
 
 <br>
 <br>

@@ -57,3 +57,21 @@ Timo und ich hatten erneut eine gute Arbeitsteilung. Trotz der verschiedenen Auf
 ### Nächste Arbeitsschritte
 
 Am Wochenende werde ich den Steck- und Schaltplan fertig machen. Somit kann ich in den nächsten beiden Lektionen das Stecken machen. So bleiben uns noch ca. 2 Wochen für das Programmieren und etwa eine Woche für den Abschluss.
+
+## Woche 4 - 26.05.2021
+
+### Tätigkeiten
+
+Diese Woche haben wir hauptsächlich am Stecken gearbeitet. Timo hat sich dabei auf das WiFi-Modul konzentriert, während ich den Rest verkabelt habe. Anschliessend habe ich mich noch darüber informiert, wie das Schieberegister am besten angesprochen werden kann.
+
+### Erlerntes
+
+Das Stecken war hauptsächlich Repetition, ich werde allerdings schneller je mehr ich damit zu tun habe. Bei der Nachforschung über das Schieberegister bin ich auf verschiedene neue Dinge gestossen. Wie z.B. die Pins angesprochen werden können.
+
+### Positives/Negatives
+
+Das Stecken ging sehr gut vonstatten. Bei der Software hingegen kamen wir erneut mit den Imports ins Stocken.
+
+### Nächste Arbeitsschritte
+
+In der nächsten Woche werden daran arbeiten sämtliche Komponenten anzusteuern.

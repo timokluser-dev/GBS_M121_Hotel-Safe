@@ -8,6 +8,6 @@ namespace Hotel_Safe_API.Parameters
     public class CanOpenParameter
     {
         public string EncryptedPin { get; set; }
-        public string? BadgeNumber { get; set; }
+        public string? BadgeNumber { get; set; } = null;
     }
 }

@@ -75,3 +75,21 @@ Das Stecken ging sehr gut vonstatten. Bei der Software hingegen kamen wir erneut
 ### Nächste Arbeitsschritte
 
 In der nächsten Woche werden daran arbeiten sämtliche Komponenten anzusteuern.
+
+## Woche 5 - 02.06.2021
+
+### Tätigkeiten
+
+Heute habe ich hauptsächlich das Testprotokoll geschrieben während Timo das Wi-Fi Module zum laufen brachte.
+
+### Erlerntes
+
+Ich habe erneut Testprotokolle repetiert und mit Excel-Regeln gearbeitet
+
+### Positives/Negatives
+
+Das Projekt ändert sich dem Ende, die meisten Dokumentationen sind Fixfertig, die anderen brauchen nur noch eine kurze Überarbeitung. Allerdings ist der Code noch nicht auf dem erwünschtem Stand.
+
+### Nächste Arbeitsschritte
+
+Für die nächste Woche werde ich alle Files auf den endgültigen Stand bringen.

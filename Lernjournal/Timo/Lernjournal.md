@@ -134,3 +134,30 @@
 
 <br>
 <br>
+
+# Lernjournal 02.06.2021
+
+## Tätigkeiten
+
+- Program refactoring, um Speicherplatz zu sparen
+- Problem mit dem Mikrocontroller versucht zu beheben
+
+## Was habe ich gelernt
+
+- Zuvor ausgesuchte WiFi Library scheint nicht zu funktionieren, da diese voraussetzt, dass man das Program vom ESP8266 aus steuern lässt
+- Das Theorietisches absetzten von API calls über die Serielle CLI vom Mikrocontroller (WiFi Module)
+
+## Positive Erfahrungen
+
+- Program konnte um 10% in der Grösse verkleinert werden
+
+## Negative Erfahrungen
+
+- Der Serielle Output vom Mikrocontroller kann komischer Weise nicht vom Arduino ausgelesen werden
+- Das Problem mit dem WiFi wirkt sich negativ auf den Fortschritt mit dem Projekt aus
+
+## Welches sind die nächsten Arbeitsschritte
+
+- Weiterhin am Problem mit dem WiFi Modul arbeiten
+- Letzter Schliff
+- Dokumente überprüfgen und ggf. noch anpassen

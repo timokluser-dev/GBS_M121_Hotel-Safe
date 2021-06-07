@@ -42,33 +42,28 @@ public:
 
         // TODO: Show on display
     }
-
     static void printPin(String pin)
     {
         String toDisplay = "PIN: " + hidePin(pin);
 
         print(toDisplay);
     }
-
     static void clear()
     {
         print("");
     }
-
     static void pinWrong()
     {
         print("PIN: Wrong");
         delay(3000);
         print("Please try again");
     }
-
     static void pinCorrect()
     {
         print("PIN: Correct");
         delay(3000);
         print("Welcome");
     }
-
     static void pinBlocked()
     {
         print("PIN: is blocked");
@@ -286,14 +281,17 @@ public:
 
     static void open()
     {
+        LED::redOff();
+        LED::greenOn();
         Display::pinCorrect();
-        safeIsClosed = false;
+        Safe::safeIsClosed = false;
     }
-
     static void close()
     {
+        LED::greenOff();
+        LED::redOn();
         Display::pinWrong();
-        safeIsClosed = true;
+        Safe::safeIsClosed = true;
     }
 };
 bool Safe::safeIsClosed = true;

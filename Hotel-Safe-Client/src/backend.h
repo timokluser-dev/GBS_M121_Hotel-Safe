@@ -9,8 +9,7 @@
 #define JSONSIZE 100
 
 // alias for C# known `null`
-// #define JSONNULL nullptr
-#define JSONNULL NULL
+#define JSONNULL nullptr
 
 // how many digits log the pin is
 #define PINLENGTH 6

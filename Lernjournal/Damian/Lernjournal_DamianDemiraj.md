@@ -18,7 +18,7 @@ Die Teamarbeit war sehr positiv. Timo und ich haben schon an vielen Projekten ge
 
 ### Nächste Arbeitsschritte
 
- Eine Übersicht über die Funktionalität haben wir jetzt. Als nächstes steht die genauere Planung an, also wie wir diese Funktionalitäten umsetzen wollen.
+Eine Übersicht über die Funktionalität haben wir jetzt. Als nächstes steht die genauere Planung an, also wie wir diese Funktionalitäten umsetzen wollen.
 
 ## Woche 2 - 12.05.2021
 
@@ -93,3 +93,16 @@ Das Projekt ändert sich dem Ende, die meisten Dokumentationen sind Fixfertig, d
 ### Nächste Arbeitsschritte
 
 Für die nächste Woche werde ich alle Files auf den endgültigen Stand bringen.
+
+## Woche 6 - 09.06.2021
+### Tätigkeiten
+Diese Woche habe ich hauptsächlich an der Dokumentation gearbeitet. Auch der Testbericht brauchte noch etwas Überarbeitung.
+### Erlerntes
+
+Ich habe mir noch intensiver die Testberichte nach Wasserfallprinzip angeschaut.
+
+### Positives/Negatives
+Leider mussten wir einsehen, dass unser Projekt nicht so funktionieren kann wie ursprünglich erhofft. Wir haben uns aber anschliessend auf die kommende Arbeit fokussiert.
+### Nächste Arbeitsschritte
+Für die Abgabe muss die Dokumentation noch überarbeitet werden.
+

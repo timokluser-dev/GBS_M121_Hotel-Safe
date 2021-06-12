@@ -26,7 +26,7 @@
 class BackendHelper
 {
 private:
-    static String httpRequest(String server, String port, String plainHttpRequest)
+    static String httpRequest(String &server, String &port, String &plainHttpRequest)
     {
         String response;
 
@@ -95,7 +95,7 @@ public:
 
         return json;
     }
-    static String httpPOSTRequest(String server, String port, String uri, String jsonData)
+    static String httpPOSTRequest(String server, String port, String uri, String &jsonData)
     {
         String response;
 
@@ -116,7 +116,7 @@ public:
             "POST " + uri + " HTTP/1.1\r\n" +
             "Host: " + server + ":" + port + "\r\n" +
             "Accept: *" + "/" + "*\r\n" +
-            "x-api-key: 05b9c947-7be5-4659-b616-bce2338c22b7\r\n" +
+            "x-api-key: " + String(HOTELSAFE_API_KEY) + "\r\n" +
             "Content-Type: application/json\r\n" +
             "Content-Length: " + jsonData.length() + "\r\n" +
             "\r\n" + jsonData;
@@ -140,7 +140,7 @@ public:
             "GET " + uri + " HTTP/1.1\r\n" +
             "Host: " + server + ":" + port + "\r\n" +
             "Accept: *" + "/" + "*\r\n" +
-            "x-api-key: 05b9c947-7be5-4659-b616-bce2338c22b7";
+            "x-api-key: " + String(HOTELSAFE_API_KEY) + "";
 
         response = BackendHelper::httpRequest(server, port, request);
 
@@ -170,7 +170,7 @@ public:
 
         String requestJson = BackendHelper::generateJSON(request);
 
-        return (BackendHelper::httpPOSTRequest("localhost", "47505", requestUri, requestJson));
+        return (BackendHelper::httpPOSTRequest(String(HOTELSAFE_API_ENDPOINT), String(HOTELSAFE_API_PORT), requestUri, requestJson));
     }
     static String checkPin(String sha256HashedPin, String badgeNumber)
     {
@@ -188,6 +188,6 @@ public:
 
         String requestJson = BackendHelper::generateJSON(request);
 
-        return (BackendHelper::httpPOSTRequest("localhost", "47505", requestUri, requestJson));
+        return (BackendHelper::httpPOSTRequest(String(HOTELSAFE_API_ENDPOINT), String(HOTELSAFE_API_PORT), requestUri, requestJson));
     }
 };

@@ -245,7 +245,7 @@ public:
     }
 };
 int Wifi::wifiConnectionAttempts = 0;
-int Wifi::maxWifiConnectionAttempts = 10;
+int Wifi::maxWifiConnectionAttempts = 20;
 
 /**
  * Hotel Safe Client: RFID Scan

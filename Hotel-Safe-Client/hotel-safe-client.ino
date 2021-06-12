@@ -86,7 +86,8 @@ void loop()
                     String badgeNumber = RFIDScanner::readBadgeCard();
                 } while (badgeNumber == "");
 
-                rawResponse = Backend::checkPin(pinHashed, badgeNumber);
+                rawResponse = "{\"canOpen\": true,\"badgeRequired\": false,\"isBlocked\": false}"; // mock API response
+                // rawResponse = Backend::checkPin(pinHashed, badgeNumber);
                 response = BackendHelper::parseJSON(rawResponse);
 
                 success = response["canOpen"] && !response["badgeRequired"];

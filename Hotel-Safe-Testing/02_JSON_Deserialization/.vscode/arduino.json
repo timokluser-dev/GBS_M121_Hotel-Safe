@@ -1,0 +1,7 @@
+{
+    "port": "COM5",
+    "board": "arduino:avr:uno",
+    "programmer": "arduino:avrispmkii",
+    "sketch": "02_JSON_Deserialization.ino",
+    "output": "build"
+}

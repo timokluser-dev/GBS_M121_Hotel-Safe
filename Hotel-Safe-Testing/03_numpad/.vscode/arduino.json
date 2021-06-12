@@ -1,0 +1,7 @@
+{
+    "port": "COM4",
+    "board": "arduino:avr:uno",
+    "programmer": "arduino:avrispmkii",
+    "sketch": "03_numpad.ino",
+    "output": "build"
+}
